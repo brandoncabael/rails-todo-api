@@ -43,3 +43,4 @@ class TodosController < ApplicationController
       @todo = Todo.find(params[:id])
     end
   end
+end
