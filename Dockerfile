@@ -16,4 +16,6 @@ EXPOSE 3000
 
 ENTRYPOINT ["bundle", "exec"]
 
+CMD ["rails", "db:migrate"]
+
 CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
