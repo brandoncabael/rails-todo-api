@@ -1,24 +1,40 @@
-# README
+Rails Todo API to interact with React Front-End Website @ https://github.com/brandoncabael/react-todo-web
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents
+- [Installation Non Docker](#installation-non-docker)
+- [Installation Docker](#installation-docker)
 
-Things you may want to cover:
+## Installation Non Docker
+Use RVM or other ruby version manager to install ruby-2.5.0
 
-* Ruby version
+Install rails gem
+`gem install rails`
 
-* System dependencies
+Install bundler gem
+`gem install bundler`
 
-* Configuration
+Clone repo to local folder
+`git clone https://github.com/brandoncabael/rails-todo-api.git`
 
-* Database creation
+Install gem dependencies
+`bundle install`
 
-* Database initialization
+Run db migrate
+`rails db:migrate`
 
-* How to run the test suite
+Start development server
+`rails server`
 
-* Services (job queues, cache servers, search engines, etc.)
+API should be running on http:localhost:3000 for React Front-End to interact with.
 
-* Deployment instructions
+## Installation Docker
+Clone repo to local folder
+`git clone https://github.com/brandoncabael/rails-todo-api.git`
 
-* ...
+Build docker image
+`docker build -t todos-api .`
+
+Run docker image
+`docker run -it -v ${PWD}:/app -p 3000:3000 --rm todos-api`
+
+API should be running on http:localhost:3000 for React Front-End to interact with.
